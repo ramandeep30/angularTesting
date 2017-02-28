@@ -1,0 +1,17 @@
+<div>
+  <form (ngSubmit) = "addData(taskDate.value, taskTitle.value, taskDescription.value, taskPriority.value)">
+    <input type="text" placeholder="Enter Date"  [(ngModel)]="task.date" name="date" #taskDate />
+    <input type="text" placeholder="Enter Title"  [(ngModel)]="task.title" name="title" #taskTitle />
+    <input type="text" placeholder="Enter Description"  [(ngModel)]="task.description" name="description" #taskDescription />
+
+    <label for="priority">Priority</label>
+    <select id="priority" [(ngModel)]="task.priority" name="priority" #taskPriority >
+      <option value="Low" >Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <br/>
+    <br/>
+    <input type="submit" class="btn btn-primary" value="Create Task" id="btnSubmit"/>
+  </form>
+</div>
